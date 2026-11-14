@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SeyedParham Moghaddasi | AI Researcher & Lead Data Scientist</title>
+  <meta name="description" content="Personal academic and professional homepage of SeyedParham Moghaddasi — Undergraduate AI Researcher (VLMs, Reasoning, Compositionality) at Sharif University of Technology & Lead Data Scientist at ZarInvest." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Mobile Top Bar -->
+  <header class="mobile-header">
+    <div class="mobile-brand">
+      <span class="status-dot"></span>
+      <strong>Parham Moghaddasi</strong>
+    </div>
+    <div class="mobile-actions">
+      <button id="theme-toggle-mobile" class="icon-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button id="menu-toggle" class="icon-btn" aria-label="Toggle Navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="layout-wrapper">
+    <!-- Left Sidebar (Hydejack-inspired Split Screen) -->
+    <aside class="sidebar" id="sidebar">
+      <canvas id="neural-canvas" aria-hidden="true"></canvas>
+      <div class="sidebar-overlay"></div>
+
+      <div class="sidebar-inner">
+        <div class="profile-section">
+          <div class="avatar-ring">
+            <!-- Replace avatar placeholder with <img src="assets/profile.jpg" alt="SeyedParham Moghaddasi"> when ready -->
+            <div class="avatar-initials">PM</div>
+          </div>
+          <h1 class="sidebar-name">SeyedParham Moghaddasi</h1>
+          <p class="sidebar-role">AI Researcher &bull; Lead Data Scientist</p>
+          <p class="sidebar-affiliation">Sharif University of Technology</p>
+
+          <blockquote class="sidebar-quote">
+            “Bridging perceptual grounding and System&nbsp;2 reasoning in multimodal intelligence.”
+          </blockquote>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Main Navigation">
+          <ul>
+            <li><a href="#about" class="nav-link active"><span>01</span> About</a></li>
+            <li><a href="#news" class="nav-link"><span>02</span> News</a></li>
+            <li><a href="#research" class="nav-link"><span>03</span> Research &amp; Projects</a></li>
+            <li><a href="#industry" class="nav-link"><span>04</span> Quantitative AI &amp; Job</a></li>
+            <li><a href="#teaching" class="nav-link"><span>05</span> Teaching &amp; Coursework</a></li>
+            <li><a href="#contact" class="nav-link"><span>06</span> Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="social-links">
+            <a href="mailto:parham.moghaddasi04@sharif.edu" aria-label="Email" title="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/seyed-parham-moghaddasi" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            </a>
+            <a href="#cv" class="cv-pill" title="Curriculum Vitae">CV</a>
+          </div>
+
+          <button id="theme-toggle" class="theme-switch" aria-label="Toggle Dark/Light Mode">
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <span class="theme-label">Switch Theme</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Scrollable Content -->
+    <main class="main-content">
+      <!-- 01. HERO / ABOUT -->
+      <section id="about" class="section reveal">
+        <div class="eyebrow-badge">
+          <span class="pulse-indicator"></span>
+          Open to Fall 2027 Graduate Research Collaborations (AI / CV / ML)
+        </div>
+
+        <h2 class="hero-greeting">
+          Hi, I’m <span class="gradient-text">Parham Moghaddasi</span>.
+        </h2>
+
+        <p class="lead-paragraph">
+          I am a final-year undergraduate student in the Department of Electrical Engineering at 
+          <a href="https://en.sharif.ir/" target="_blank" rel="noopener">Sharif University of Technology</a>, 
+          where I was awarded <strong>Direct M.Sc. Admission</strong> (Exceptional Talents Award &mdash; waiving the national graduate entrance examination for the top percentile of students).
+        </p>
+
+        <p class="body-paragraph">
+          My academic research sits at the intersection of <strong>Vision-Language Models (VLMs)</strong>, <strong>multimodal reasoning</strong>, and <strong>compositionality</strong>. Currently, I work as an Undergraduate Researcher advised by <a href="https://scholar.google.com/citations?user=V2c9xSwAAAAJ" target="_blank" rel="noopener">Dr. Mahdieh Soleymani Baghshah</a>, investigating how foundation models perceive, ground, and reason over visual motion and temporal dynamics.
+        </p>
+
+        <p class="body-paragraph">
+          Beyond academia, I serve as the <strong>Lead Data Scientist</strong> at <a href="https://zarinvest.net/" target="_blank" rel="noopener">ZarInvest</a>. I lead our quantitative research team in architecting end-to-end machine learning pipelines, predictive signal engines, and algorithmic trading strategies across gold and financial markets &mdash; translating theoretical probabilistic modeling into high-reliability production systems.
+        </p>
+
+        <!-- Key Highlights Grid -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-value">Top %</span>
+            <span class="metric-title">Direct M.Sc. Admission</span>
+            <span class="metric-sub">Exceptional Talents National Exam Waiver at Sharif</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">VLMs &amp; AI</span>
+            <span class="metric-title">Multimodal Research</span>
+            <span class="metric-sub">Motion perception &amp; compositional reasoning</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-value">Lead DS</span>
+            <span class="metric-title">Quantitative Finance</span>
+            <span class="metric-sub">Leading ML pipelines &amp; algo trading at ZarInvest</span>
+          </div>
+        </div>
+
+        <!-- Research Interests -->
+        <div class="sub-block">
+          <h3 class="subsection-title">Research Interests</h3>
+          <div class="interest-tags">
+            <span class="tag tag-accent">Vision-Language Models (VLMs)</span>
+            <span class="tag tag-accent">LLMs &amp; System 2 Reasoning</span>
+            <span class="tag tag-accent">Compositionality &amp; Visual Grounding</span>
+            <span class="tag">Motion &amp; Temporal Perception</span>
+            <span class="tag">Bayesian Deep Learning &amp; Uncertainty</span>
+            <span class="tag">Reinforcement Learning</span>
+            <span class="tag">Quantitative &amp; Time-Series Modeling</span>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- 02. NEWS -->
+      <section id="news" class="section reveal">
+        <div class="section-header">
+          <span class="section-index">02</span>
+          <h2 class="section-title">Recent News</h2>
+        </div>
+
+        <div class="news-list">
+          <div class="news-item">
+            <span class="news-date">2026-10</span>
+            <div class="news-content">
+              Promoted to <strong>Lead Data Scientist</strong> at <a href="https://zarinvest.net/" target="_blank" rel="noopener">ZarInvest</a>, driving the technical roadmap and mentoring our quantitative data science team.
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">2026-09</span>
+            <div class="news-content">
+              Serving simultaneously as a Teaching Assistant for <strong>Deep Learning</strong> (Dr. Fatemizadeh), <strong>Machine Learning</strong> (Prof. Soleymani), and <strong>Communication Systems</strong> (Prof. Behroozi) for Fall 2026.
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">2026-06</span>
+            <div class="news-content">
+              Completed an in-depth research survey on <strong>Compositionality in Vision-Language Models</strong> as part of <em>Advanced Topics in AI: System 2 Thinking in LLMs</em> (Grade: 18.5/20).
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">2026-02</span>
+            <div class="news-content">
+              Joined <strong>Dr. Mahdieh Soleymani Baghshah’s Lab</strong> at Sharif University of Technology to research motion perception capabilities in VLMs.
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">2026-01</span>
+            <div class="news-content">
+              Awarded <strong>Direct Admission to the M.Sc. Program</strong> at Sharif University of Technology without the national entrance exam.
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="news-date">2025-07</span>
+            <div class="news-content">
+              Joined <strong>ZarInvest</strong> as a Quantitative Data Scientist focusing on predictive modeling for gold and ETF markets.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- 03. RESEARCH & PROJECTS -->
+      <section id="research" class="section reveal">
+        <div class="section-header-row">
+          <div class="section-header">
+            <span class="section-index">03</span>
+            <h2 class="section-title">Research &amp; Selected Projects</h2>
+          </div>
+
+          <div class="filter-tabs" role="tablist" aria-label="Filter Projects">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="vlm">VLMs &amp; Reasoning</button>
+            <button class="filter-btn" data-filter="ml">Probabilistic ML</button>
+            <button class="filter-btn" data-filter="software">Engineering</button>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card featured" data-category="vlm">
+            <div class="project-top">
+              <div class="project-meta">
+                <span class="badge badge-live">Ongoing Research &bull; 2026–Present</span>
+                <span class="project-org">Sharif University of Technology</span>
+              </div>
+              <h3 class="project-title">Motion Perception Capabilities in Vision-Language Models</h3>
+              <p class="project-advisor">Advisor: Dr. Mahdieh Soleymani Baghshah (Dept. of Computer Engineering)</p>
+              <p class="project-desc">
+                While state-of-the-art Vision-Language Models excel at static object recognition, they frequently struggle with fine-grained temporal dynamics, trajectory understanding, and directional motion grounding. This research systematically diagnoses spatiotemporal failure modes in modern VLMs and explores representation-level and prompting interventions to improve motion-aware reasoning.
+              </p>
+            </div>
+            <div class="project-footer">
+              <div class="tech-pills">
+                <span>Vision-Language Models</span>
+                <span>Temporal Grounding</span>
+                <span>PyTorch</span>
+                <span>Multimodal Evaluation</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card featured" data-category="vlm">
+            <div class="project-top">
+              <div class="project-meta">
+                <span class="badge">Research Survey &bull; Spring 2026</span>
+                <span class="project-org">Advanced Topics in AI (System 2 Thinking in LLMs)</span>
+              </div>
+              <h3 class="project-title">Compositionality in Vision-Language Models: Benchmarks, Bottlenecks &amp; System 2 Remedies</h3>
+              <p class="project-desc">
+                Conducted a comprehensive literature survey investigating why contrastive and generative VLMs often behave like “bags of words” when binding attributes, relations, and spatial configurations. Synthesized recent advances in hard-negative contrastive fine-tuning, neuro-symbolic decomposition, and chain-of-thought visual reasoning.
+              </p>
+            </div>
+            <div class="project-footer">
+              <div class="tech-pills">
+                <span>Compositional Reasoning</span>
+                <span>System 2 Thinking</span>
+                <span>Contrastive Learning</span>
+                <span>VLMs</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-category="ml">
+            <div class="project-top">
+              <div class="project-meta">
+                <span class="badge">Course Research Project &bull; 2025</span>
+                <span class="project-org">Machine Learning</span>
+              </div>
+              <h3 class="project-title">Bayesian Neural Networks &amp; Uncertainty Quantification</h3>
+              <p class="project-desc">
+                Theoretical and empirical investigation of probabilistic neural architectures. Implemented variational inference and Monte Carlo Dropout to separate aleatoric and epistemic uncertainty, evaluating calibration reliability on out-of-distribution regimes where standard deterministic networks become overconfident.
+              </p>
+            </div>
+            <div class="project-footer">
+              <div class="tech-pills">
+                <span>Bayesian Deep Learning</span>
+                <span>Variational Inference</span>
+                <span>Uncertainty Calibration</span>
+                <span>Python</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-category="software">
+            <div class="project-top">
+              <div class="project-meta">
+                <span class="badge">Software Engineering &bull; 2022–2023</span>
+                <span class="project-org">Object-Oriented Programming</span>
+              </div>
+              <h3 class="project-title">Algorithmic Food Ordering &amp; Dispatch Application</h3>
+              <p class="project-desc">
+                Designed and built a modular object-oriented application in JavaScript combining clean state management and algorithmic routing/dispatch logic with a responsive graphical user interface.
+              </p>
+            </div>
+            <div class="project-footer">
+              <div class="tech-pills">
+                <span>JavaScript</span>
+                <span>Object-Oriented Design</span>
+                <span>Algorithmic Logic</span>
+                <span>UI Architecture</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- 04. INDUSTRY & QUANTITATIVE AI (JOB) -->
+      <section id="industry" class="section reveal">
+        <div class="section-header">
+          <span class="section-index">04</span>
+          <h2 class="section-title">What I Do in Industry: Quantitative AI</h2>
+        </div>
+
+        <p class="section-intro">
+          Alongside my academic research, I lead the quantitative data science function at 
+          <a href="https://zarinvest.net/" target="_blank" rel="noopener">ZarInvest</a>. Financial markets are among the noisiest, most non-stationary environments in machine learning &mdash; making them an extraordinary testbed for rigorous data engineering, uncertainty-aware modeling, and disciplined validation.
+        </p>
+
+        <!-- Experience Timeline -->
+        <div class="experience-card">
+          <div class="exp-header">
+            <div>
+              <h3 class="exp-company">ZarInvest</h3>
+              <p class="exp-location">Tehran, Iran &bull; Quantitative Financial Markets &amp; Gold ETFs</p>
+            </div>
+            <a href="https://zarinvest.net/" target="_blank" rel="noopener" class="external-link">
+              zarinvest.net
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+
+          <div class="role-timeline">
+            <div class="role-node current">
+              <div class="role-dot"></div>
+              <div class="role-body">
+                <div class="role-title-row">
+                  <h4>Lead Data Scientist</h4>
+                  <span class="role-period">Oct 2026 &ndash; Present</span>
+                </div>
+                <p>
+                  Driving the technical strategy for quantitative research across gold and financial markets. Guiding the data science team in building end-to-end ML pipelines, predictive models, and algorithmic trading systems, while defining technical roadmaps, mentoring team members, and aligning quantitative signals with executive investment decisions.
+                </p>
+              </div>
+            </div>
+
+            <div class="role-node">
+              <div class="role-dot"></div>
+              <div class="role-body">
+                <div class="role-title-row">
+                  <h4>Data Scientist</h4>
+                  <span class="role-period">Jul 2025 &ndash; Oct 2026</span>
+                </div>
+                <p>
+                  Executed data-driven research across spot gold and gold ETF markets. Engineered and evaluated proprietary market indicators and trading signals using multi-resolution price, volume, and fund-flow datasets. Built walk-forward backtesting engines, optimized signal thresholds, and deployed predictive regimes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Architecture Pillars of My Job -->
+          <div class="job-pillars">
+            <div class="pillar-box">
+              <div class="pillar-icon">01 // PIPELINES</div>
+              <h5>End-to-End Data Architecture</h5>
+              <p>Automated ingestion, cleaning, and temporal alignment of asynchronous market feeds, fund flows, and macroeconomic series with zero look-ahead leakage.</p>
+            </div>
+            <div class="pillar-box">
+              <div class="pillar-icon">02 // MODELING</div>
+              <h5>Predictive Signal &amp; Regime Models</h5>
+              <p>Designing statistical and machine learning models that extract robust alpha signals and quantify market regime shifts under heavy-tailed noise.</p>
+            </div>
+            <div class="pillar-box">
+              <div class="pillar-icon">03 // EXECUTION</div>
+              <h5>Backtesting &amp; Strategy Leadership</h5>
+              <p>Stress-testing strategies via walk-forward validation, mentoring junior data scientists, and bridging quantitative research with live portfolio decisions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- 05. TEACHING & COURSEWORK -->
+      <section id="teaching" class="section reveal">
+        <div class="section-header">
+          <span class="section-index">05</span>
+          <h2 class="section-title">Teaching &amp; Academic Excellence</h2>
+        </div>
+
+        <div class="two-col-grid">
+          <!-- Teaching Assistantships -->
+          <div class="col-panel">
+            <h3 class="panel-heading">Teaching Assistantships at Sharif</h3>
+            <ul class="ta-list">
+              <li>
+                <div class="ta-top">
+                  <strong>Deep Learning</strong>
+                  <span class="ta-sem">Fall 2026</span>
+                </div>
+                <p class="ta-prof">Instructor: Dr. E. Fatemizadeh</p>
+                <p class="ta-detail">Member of the Practical &amp; Coding Homework team, designing PyTorch deep learning assignments.</p>
+              </li>
+              <li>
+                <div class="ta-top">
+                  <strong>Machine Learning</strong>
+                  <span class="ta-sem">Fall 2026</span>
+                </div>
+                <p class="ta-prof">Instructors: Prof. M. Soleymani &amp; Mr. Mariooryad</p>
+                <p class="ta-detail">Authored problem sets and analytical questions on Support Vector Machines (SVMs), PCA, and Generative Models.</p>
+              </li>
+              <li>
+                <div class="ta-top">
+                  <strong>Communication Systems</strong>
+                  <span class="ta-sem">Fall 2026</span>
+                </div>
+                <p class="ta-prof">Instructor: Prof. H. Behroozi</p>
+                <p class="ta-detail">Member of the Practical Homework simulation team.</p>
+              </li>
+              <li>
+                <div class="ta-top">
+                  <strong>Signals &amp; Systems (2&times;)</strong>
+                  <span class="ta-sem">Winter 2025 &amp; Winter 2026</span>
+                </div>
+                <p class="ta-prof">Instructors: Prof. H. Behroozi / Dr. M. Mojahedian</p>
+                <p class="ta-detail">Theoretical Homework team; designed and graded assignments for 30+ undergraduate students.</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Selected Coursework & Skills -->
+          <div class="col-panel">
+            <h3 class="panel-heading">Selected AI &amp; Quantitative Coursework</h3>
+            <p class="panel-note">Graded on the Iranian 20-point scale (18+ denotes A+ distinction):</p>
+
+            <div class="course-bars">
+              <div class="course-item">
+                <div class="course-label">
+                  <span>Artificial Intelligence</span>
+                  <strong>19.7 / 20</strong>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width: 98.5%"></div></div>
+              </div>
+
+              <div class="course-item">
+                <div class="course-label">
+                  <span>B.Sc. Thesis Project I &amp; II</span>
+                  <strong>19.3 &amp; 18.6 / 20</strong>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width: 96.5%"></div></div>
+              </div>
+
+              <div class="course-item">
+                <div class="course-label">
+                  <span>Fundamentals of Programming</span>
+                  <strong>19.1 / 20</strong>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width: 95.5%"></div></div>
+              </div>
+
+              <div class="course-item">
+                <div class="course-label">
+                  <span>Advanced Topics in AI (System 2 Thinking in LLMs)</span>
+                  <strong>18.5 / 20</strong>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width: 92.5%"></div></div>
+              </div>
+
+              <div class="course-item">
+                <div class="course-label">
+                  <span>Deep Learning (Graduate Course)</span>
+                  <strong>18.2 / 20</strong>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width: 91%"></div></div>
+              </div>
+
+              <div class="course-item">
+                <div class="course-label">
+                  <span>Mathematical Methods in Engineering</span>
+                  <strong>18.0 / 20</strong>
+                </div>
+                <div class="progress-track"><div class="progress-fill" style="width: 90%"></div></div>
+              </div>
+
+              <div class="course-item">
+                <div class="course-label">
+                  <span>Reinforcement Learning</span>
+                  <strong class="in-prog">In Progress</strong>
+                </div>
+                <div class="progress-track"><div class="progress-fill striped" style="width: 100%"></div></div>
+              </div>
+            </div>
+
+            <div class="skills-mini">
+              <h4>Technical Stack</h4>
+              <p><strong>Languages:</strong> Python, C++, Java, JavaScript, LaTeX</p>
+              <p><strong>AI &amp; Data:</strong> PyTorch, Vision-Language Models, Bayesian ML, Quantitative Finance, End-to-End Data Engineering, Algorithmic Backtesting</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider" />
+
+      <!-- 06. CONTACT & CV -->
+      <section id="contact" class="section reveal">
+        <div class="section-header">
+          <span class="section-index">06</span>
+          <h2 class="section-title">Get in Touch</h2>
+        </div>
+
+        <div class="contact-card" id="cv">
+          <div class="contact-text">
+            <h3>Let’s connect on research, VLMs, or quantitative ML.</h3>
+            <p>
+              I am actively exploring graduate research opportunities (MASc / MSc / PhD) for <strong>Fall 2027</strong> in Computer Vision, Vision-Language Models, Multimodal Reasoning, and Machine Learning. Feel free to reach out if you’d like to collaborate or chat!
+            </p>
+            <div class="contact-buttons">
+              <a href="mailto:parham.moghaddasi04@sharif.edu" class="btn btn-primary">
+                parham.moghaddasi04@sharif.edu
+              </a>
+              <a href="https://linkedin.com/in/seyed-parham-moghaddasi" target="_blank" rel="noopener" class="btn btn-secondary">
+                LinkedIn Profile
+              </a>
+              <!-- Upload your compiled CV PDF as cv.pdf in the root folder -->
+              <a href="cv.pdf" target="_blank" class="btn btn-outline">
+                Download CV (PDF)
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 SeyedParham Moghaddasi. Crafted for GitHub Pages with an interactive vector-field canvas.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
